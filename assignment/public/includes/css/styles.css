@@ -1,0 +1,49 @@
+  table,tr,td{
+  	text-align: center;
+    color:green;
+    border: 2px solid black;
+    
+  }
+  th{
+    background-color: black;
+  }
+
+
+  	h2{
+  	color: blue;
+  	font-size: 20px;
+
+  }
+ .navbar-brand
+   {
+      padding: 10px 15px;
+   }
+
+#main{
+	margin-top: 80px;
+}
+#search{
+	width: 100%;
+}
+#btn1,#btn2,#btn3{
+	width: 100%;
+}
+
+.panel{
+	height: 120px;
+}
+
+tr td .edit {
+	display: none;
+}
+
+tr td.edit .edit {
+	display: initial;
+}
+tr td.edit .noedit {
+	display: none;
+}
+
+/*#wrap{
+  display: none;
+}*/

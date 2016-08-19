@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Website Title & Description for Search Engine purposes -->
+    <title>SRLT20.com - Stack RouteOfficial Website</title>
+    <meta name="Description" content="Visit SRLT20.com the official IPLT20 website for minute-to-minute LIVE updates." />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="language" content="en" />
+    <!-- Mobile viewport optimized -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- Bootstrap CSS -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="includes/css/bootstrap-glyphicons.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="includes/css/styles.css">
+    <!-- Include Modernizr in the head, before any other Javascript -->
+    <script src="includes/js/modernizr-2.6.2.min.js"></script>
+    <script type="text/javascript" src="jquery-3.1.0.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.1/mustache.js"></script>
+</head>
+
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <button class="navbar-toggle" data-target=".navbar-responsive-collapse" data-toggle="collapse" type="button">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/"><img src="images/cricbuzz.png" alt="Cricbuzz"></a>
+        <div class="nav-collapse collapse navbar-responsive-collapse">
+            <h2 align="center">Welcome to Stack Route League</h2>
+        </div>
+    </div>
+    <div class="container" id="main">
+        <div class="row">
+            <div class="col-sm-4">
+                <div id="panel1" class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h5 align="center">Add a player</h5>
+                    </div>
+                    <div class="panel-body">
+                        <a href="#myModal" role="button" class="btn btn-danger" data-toggle="modal" id="btn1">
+                            <span class="glyphicon glyphicon-hand-up"></span>Add</a>
+                        <div class="modal fade" id="myModal">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title">Add an Player</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form class="form-horizontal" id="f1">
+                                            <div class="form-group">
+                                                <label for="Name" class="col-lg-3 control-label">Enter Name</label>
+                                                <div class="col-lg-9">
+                                                    <input class="form-control" type="text" name="Name" id="Name" required="required" />
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="dob" class="col-lg-3 control-label">Enter DOB</label>
+                                                <div class="col-lg-9">
+                                                    <input class="form-control" type="date" name="dob" id="dob" required="required"/>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="age" class="col-lg-3 control-label">Enter Age</label>
+                                                <div class="col-lg-9">
+                                                    <input class="form-control" type="number" name="age" id="age" min="20" max="40" required="required"/>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="gender" class="col-lg-3 control-label">Enter Gender</label>
+                                                <div class="col-lg-9">
+                                                    <select>
+                                                        <option value="gender">male</option>
+                                                        <option value="gender">female</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="testsPlayed" class="col-lg-3 control-label">Enter testsPlayed</label>
+                                                <div class="col-lg-9">
+                                                    <input class="form-control" type="number" name="testsPlayed" id="testsPlayed" required="required"/>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="odiPlayed" class="col-lg-3 control-label">Enter odiPlayed</label>
+                                                <div class="col-lg-9">
+                                                    <input class="form-control" type="number" name="odiPlayed" id="odiPlayed" required="required"/>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="Runs_in_test" class="col-lg-3 control-label">Enter Runs_in_test</label>
+                                                <div class="col-lg-9">
+                                                    <input class="form-control" type="number" name="Runs_in_test" id="Runs_in_test" required="required"/>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="Runs_in_odi" class="col-lg-3 control-label">Enter Runs_in_odi</label>
+                                                <div class="col-lg-9">
+                                                    <input class="form-control" type="number" name="Runs_in_odi" id="Runs_in_odi" required="required" />
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="Debut_Test" class="col-lg-3 control-label">Enter Debut_Test</label>
+                                                <div class="col-lg-9">
+                                                    <input class="form-control" type="date" name="Debut_Test" id="Debut_Test" required="required"/>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="Debut_Odi" class="col-lg-3 control-label">Enter Debut_Odi</label>
+                                                <div class="col-lg-9">
+                                                    <input class="form-control" type="date" name="Debut_Odi" id="Debut_Odi" required="required"/>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="rating" class="col-lg-3 control-label">Enter rating</label>
+                                                <div class="col-lg-9">
+                                                    <input class="form-control" type="number" name="rating" id="rating" required="required"/>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="age" class="col-lg-3 control-label">Enter Country Code</label>
+                                                <div class="col-lg-9">
+                                                    <input class="form-control" type="text" name="code" id="code" required="required" />
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="MOM" class="col-lg-3 control-label">Enter MOM</label>
+                                                <div class="col-lg-9">
+                                                    <input class="form-control" type="number" name="MOM" id="MOM" required="required"/>
+                                                </div>
+                                            </div>
+
+                                             <div class="modal-footer">
+                                        <button class="btn btn-warning" id="submit">submit</button>
+                                    </div>
+                                        </form>
+                                    </div>
+                                   
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!---panel body-->
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div id="panel2" class="panel panel-primary">
+                    <div class="panel-heading">
+                        <input type="text" placeholder="search for a player" id="search">
+                    </div>
+                    <div class="panel-body">
+                        <button class="btn btn-success" id="btn2">Search</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div id="panel3" class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h5 align="center">
+              Display the players</h5>
+                    </div>
+                    <div class="panel-body">
+                        <button class="btn btn-warning" id="btn3">Load</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content" id="info">
+            <table class="table table-bordered table-responsive" id="disp">
+                <template id="player-template">
+                    <tr>
+                        <td>{{id}}</td>
+                        <td><span class="noedit Name">{{Name}}</span>
+                        <input class="edit Name"></td>
+                        
+                        <td><span class="noedit dob">{{dob}}</span>
+                        <input class="edit dob"></td>
+                        <td><span class="noedit age">{{age}}</span>
+                        <input class="edit age"></td>
+                        <td><span class="noedit gender">{{gender}}</span>
+                        <input class="edit gender"></td>
+                        <td><span class="noedit testsPlayed">{{testsPlayed}}</span>
+                        <input class="edit testsPlayed"></td>
+                        <td><span class="noedit odiPlayed">{{odiPlayed}}</span>
+                        <input class="edit odiPlayed"></td>
+                        <td><span class="noedit Runs_in_test">{{Runs_in_test}}</span>
+                        <input class="edit Runs_in_test"></td>
+                        <td><span class="noedit Runs_in_odi">{{Runs_in_odi}}</span>
+                        <input class="edit Runs_in_odi"></td>
+                        <td><span class="noedit Debut_Test">{{Debut_Test}}</span>
+                        <input class="edit Debut_Test"></td>
+                        <td><span class="noedit Debut_Odi">{{Debut_Odi}}</span>
+                        <input class="edit Debut_Odi"></td>
+                        <td><span class="noedit rating">{{rating}}</span>
+                        <input class="edit rating"></td>
+                        <td><span class="noedit code">{{code}}</span>
+                        <input class="edit code"></td>
+                        <td><span class="noedit MOM">{{MOM}}</span>
+                        <input class="edit MOM"></td>
+                        <td><button  id="editButton" data-id={{id}} class="editButton btn btn-primary  noedit">Edit</button>
+                        <button class="cancelButton   edit">Cancel</button>
+                        <button data-id={{id}} class="saveButton   edit">Save</button>
+
+                            <button data-id={{id}} id="deleteButton" type="button" class="remove btn btn-warning">Delete</button>
+                        </td>
+                    </tr>
+                </template>
+            </table>
+        </div>
+
+     </div>
+
+     <div class="container" id="wrap">
+          <button class="btn btn-default btn pull-left"  id="prev">Previous</button>
+          <button class="btn btn-success btn pull-right"  id="next">next</button>
+     </div>
+
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <!-- If no online access, fallback to our hardcoded version of jQuery -->
+    <script>
+    window.jQuery || document.write('<script src="includes/js/jquery-1.8.2.min.js"><\/script>')
+    </script>
+    <!-- Bootstrap JS -->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <!-- Custom JS -->
+    <script src="includes/js/script.js"></script>
+</body>
+
+</html>
