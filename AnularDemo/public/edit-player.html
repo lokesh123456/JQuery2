@@ -1,0 +1,117 @@
+<div class="modal fade" id="myModalEdit" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Player to update</h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal" name="editForm" novalidate>
+                    <div class="form-group" ng-class="{ 'has-error' : editForm.Name.$invalid && !editForm.Name.$pristine }">
+                        <label for="Name" class="control-label col-sm-2 ">Enter Name</label>
+                        <div class="col-sm-10 ">
+                            <input class="form-control" type="text " name="Name" ng-model="editPlayer.Name" required />
+                            <p ng-show="editForm.Name.$invalid && !editForm.Name.$pristine" class="help-block">You name is required.</p>
+                        </div>
+                    </div>
+                    <div class="form-group" ng-class="{ 'has-error' : editForm.dob.$invalid && !editForm.dob.$pristine }">
+                        <label for="dob " class="control-label col-sm-2 ">Enter DOB</label>
+                        <div class="col-sm-10 ">
+                            <input class="form-control" type="text" name="dob" ng-model="editPlayer.dob" required />
+                            <p ng-show="editForm.dob.$invalid && !editForm.dob.$pristine" class="help-block">You dob is required.</p>
+                        </div>
+                    </div>
+                    <div class="form-group" ng-class="{ 'has-error' : editForm.age.$invalid && !editForm.age.$pristine }">
+                        <label for="age " class="control-label col-sm-2 ">Enter Age</label>
+                        <div class="col-sm-10 ">
+                            <input class="form-control" type="number" name="age " ng-model="editPlayer.age" required />
+                            <p ng-show="editForm.age.$invalid && !editForm.age.$pristine" class="help-block">You age is required.</p>
+                        </div>
+                    </div>
+                    <div class="form-group " ng-class="{ 'has-error' : editForm.gender.$invalid && !editForm.gender.$pristine }">
+                        <label for="gender" class="control-label col-sm-2 ">Enter Gender</label>
+                        <div class="col-sm-10 ">
+                            <input type="radio" ng-model="editPlayer.gender" value="male" required />male
+                            <input type="radio" ng-model="editPlayer.gender" value="female" />female</label>
+                            <br />
+                            <p ng-show="editForm.gender.$invalid && !editForm.gender.$pristine" class="help-block">You gender is required.</p>
+                        </div>
+                    </div>
+                    <div class="form-group " ng-class="{ 'has-error' : editForm.testsPlayed.$invalid && !editForm.testsPlayed.$pristine }">
+                        <label for="testsPlayed " class="control-label col-sm-2 ">Enter testsPlayed</label>
+                        <div class="col-sm-10 ">
+                            <input class="form-control " type="number" name="testsPlayed" ng-model="editPlayer.testsPlayed" required/>
+                            <p ng-show="editForm.testsPlayed.$invalid && !editForm.testsPlayed.$pristine" class="help-block">You age is required.</p>
+                        </div>
+                    </div>
+                    <div class="form-group " ng-class="{ 'has-error' : editForm.odiPlayed.$invalid && !editForm.odiPlayed.$pristine }">
+                        <label for="odiPlayed " class="control-label col-sm-2 ">Enter odiPlayed</label>
+                        <div class="col-sm-10 ">
+                            <input class="form-control " type="number" name="odiPlayed" ng-model="editPlayer.odiPlayed" required/>
+                            <p ng-show="editForm.odiPlayed.$invalid && !editForm.odiPlayed.$pristine" class="help-block">You age is required.</p>
+                        </div>
+                    </div>
+                    <div class="form-group " ng-class="{ 'has-error' : editForm.Runs_in_test.$invalid && !editForm.Runs_in_test.$pristine }">
+                        <label for="Runs_in_test " class="control-label col-sm-2 ">Enter Runs_in_test</label>
+                        <div class="col-sm-10 ">
+                            <input class="form-control " type="number" name="Runs_in_test" ng-model="editPlayer.Runs_in_test" required/>
+                            <p ng-show="editForm.Runs_in_test.$invalid && !editForm.Runs_in_test.$pristine" class="help-block">You age is required.</p>
+                        </div>
+                    </div>
+                    <div class="form-group " ng-class="{ 'has-error' : editForm.Runs_in_odi.$invalid && !editForm.Runs_in_odi.$pristine }">
+                        <label for="Runs_in_odi " class="control-label col-sm-2 ">Enter Runs_in_odi</label>
+                        <div class="col-sm-10 ">
+                            <input class="form-control " type="number" name="Runs_in_odi" ng-model="editPlayer.Runs_in_odi" required/>
+                            <p ng-show="editForm.Runs_in_odi.$invalid && !editForm.Runs_in_odi.$pristine" class="help-block">You age is required.</p>
+                        </div>
+                    </div>
+                    <div class="form-group " ng-class="{ 'has-error' : editForm.Debut_Test.$invalid && !editForm.Debut_Test.$pristine }">
+                        <label for="Debut_Test " class="control-label col-sm-2 ">Enter Debut_Test</label>
+                        <div class="col-sm-10 ">
+                            <input class="form-control " type="text" name="Debut_Test" ng-model="editPlayer.Debut_Test" required />
+                            <p ng-show="editForm.Debut_Test.$invalid && !editForm.Debut_Test.$pristine" class="help-block">You age is required.</p>
+                        </div>
+                    </div>
+                    <div class="form-group " ng-class="{ 'has-error' : editForm.Debut_Odi.$invalid && !editForm.Debut_Odi.$pristine }">
+                        <label for="Debut_Odi" class="control-label col-sm-2 ">Enter Debut_Odi</label>
+                        <div class="col-sm-10 ">
+                            <input class="form-control " type="text" name="Debut_Odi" ng-model="editPlayer.Debut_Odi" required />
+                            <p ng-show="editForm.Debut_Odi.$invalid && !editForm.Debut_Odi.$pristine" class="help-block">You age is required.</p>
+                        </div>
+                    </div>
+                    <div class="form-group " ng-class="{ 'has-error' : editForm.rating.$invalid && !editForm.rating.$pristine }">
+                        <label for="rating " class="control-label col-sm-2 ">Enter rating</label>
+                        <div class="col-sm-10 ">
+                            <input class="form-control " type="number" name="rating" ng-model="editPlayer.rating" required/>
+                            <p ng-show="editForm.rating.$invalid && !editForm.rating.$pristine" class="help-block">You age is required.</p>
+                        </div>
+                    </div>
+                    <div class="form-group " ng-class="{ 'has-error' : editForm.code.$invalid && !editForm.code.$pristine }">
+                        <label for="age " class="control-label col-sm-2 ">Enter Country Code</label>
+                        <div class="col-sm-10 ">
+                            <input class="form-control " type="text" name="code" ng-model="editPlayer.code" required/>
+                            <p ng-show="editForm.code.$invalid && !editForm.code.$pristine" class="help-block">You age is required.</p>
+                        </div>
+                    </div>
+                    <div class="form-group " ng-class="{ 'has-error' : editForm.MOM.$invalid && !editForm.MOM.$pristine }">
+                        <label for="MOM " class="control-label col-sm-2 ">Enter MOM</label>
+                        <div class="col-sm-10 ">
+                            <input class="form-control " type="number" name="MOM" ng-model="editPlayer.MOM" required />
+                            <p ng-show="editForm.MOM.$invalid && !editForm.MOM.$pristine" class="help-block">You age is required.</p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <button type="submit" class="btn btn-default pull-right" data-dismiss="modal" ng-disabled="editForm.$invalid" ng-click="updatePlayer(editPlayer.id,editPlayer)">Save</button>
+                        </div>
+                    </div>
+                
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

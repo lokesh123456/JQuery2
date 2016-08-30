@@ -1,0 +1,18 @@
+
+ .navbar-brand
+   {
+      padding: 10px 15px;
+   }
+
+   #main{
+   margin-top: 80px;
+}
+.panel{
+   height: 130px;
+}
+#btn1,#btn2{
+   width: 100%;
+}
+#text{
+   width: 60%;
+}

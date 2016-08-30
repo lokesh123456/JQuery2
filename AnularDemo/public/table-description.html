@@ -1,0 +1,20 @@
+<table class="table table-stripped table-responsive table-bordered">
+    <thead>
+        <tr ng-repeat="play in player" ng-if="$first">
+            <th ng-repeat="(key, val) in play">
+                {{key}}
+            </th>
+
+            <th>Operations</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="play in player">
+            <td ng-repeat="(key, val) in play">
+                {{val}}
+            </td>
+            <td><span class="glyphicon glyphicon-pencil" data-toggle="modal" data-target="#myModalEdit" ng-click="editUser(play)"></span>
+                <span class="glyphicon glyphicon-trash" ng-click="deleteUser(play.id)" class="remove"></span></td>
+        </tr>
+    </tbody>
+</table>

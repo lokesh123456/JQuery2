@@ -1,0 +1,116 @@
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Welcome to New Player</h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal" name="userForm" novalidate>
+                    <div class="form-group" ng-class="{ 'has-error' : userForm.Name.$invalid && !userForm.Name.$pristine }">
+                        <label for="Name" class="control-label col-sm-2 ">Enter Name</label>
+                        <div class="col-sm-10 ">
+                            <input class="form-control" type="text " name="Name" ng-model="newPlayer.Name" required />
+                            <p ng-show="userForm.Name.$invalid && !userForm.Name.$pristine" class="help-block">You name is required.</p>
+                        </div>
+                    </div>
+                    <div class="form-group" ng-class="{ 'has-error' : userForm.dob.$invalid && !userForm.dob.$pristine }">
+                        <label for="dob " class="control-label col-sm-2 ">Enter DOB</label>
+                        <div class="col-sm-10 ">
+                            <input class="form-control" date='dd-MM-yyyy' name="dob" ng-model="newPlayer.dob" required />
+                            <p ng-show="userForm.dob.$invalid && !userForm.dob.$pristine" class="help-block">You dob is required.</p>
+                        </div>
+                    </div>
+                    <div class="form-group" ng-class="{ 'has-error' : userForm.age.$invalid && !userForm.age.$pristine }">
+                        <label for="age " class="control-label col-sm-2 ">Enter Age</label>
+                        <div class="col-sm-10 ">
+                            <input class="form-control" type="number" name="age " ng-model="newPlayer.age" required />
+                            <p ng-show="userForm.age.$invalid && !userForm.age.$pristine" class="help-block">You age is required.</p>
+                        </div>
+                    </div>
+                    <div class="form-group " ng-class="{ 'has-error' : userForm.gender.$invalid && !userForm.gender.$pristine }">
+                        <label for="gender" class="control-label col-sm-2 ">Enter Gender</label>
+                        <div class="col-sm-10 ">
+                            <input type="radio" ng-model="newPlayer.gender" value="male" required />male
+                            <input type="radio" ng-model="newPlayer.gender" value="female" />female</label>
+                            <br />
+                            <p ng-show="userForm.gender.$invalid && !userForm.gender.$pristine" class="help-block">You gender is required.</p>
+                        </div>
+                    </div>
+                    <div class="form-group " ng-class="{ 'has-error' : userForm.testsPlayed.$invalid && !userForm.testsPlayed.$pristine }">
+                        <label for="testsPlayed " class="control-label col-sm-2 ">Enter testsPlayed</label>
+                        <div class="col-sm-10 ">
+                            <input class="form-control " type="number" name="testsPlayed" ng-model="newPlayer.testsPlayed" required/>
+                            <p ng-show="userForm.testsPlayed.$invalid && !userForm.testsPlayed.$pristine" class="help-block">You age is required.</p>
+                        </div>
+                    </div>
+                    <div class="form-group " ng-class="{ 'has-error' : userForm.odiPlayed.$invalid && !userForm.odiPlayed.$pristine }">
+                        <label for="odiPlayed " class="control-label col-sm-2 ">Enter odiPlayed</label>
+                        <div class="col-sm-10 ">
+                            <input class="form-control " type="number" name="odiPlayed" ng-model="newPlayer.odiPlayed" required/>
+                            <p ng-show="userForm.odiPlayed.$invalid && !userForm.odiPlayed.$pristine" class="help-block">You age is required.</p>
+                        </div>
+                    </div>
+                    <div class="form-group " ng-class="{ 'has-error' : userForm.Runs_in_test.$invalid && !userForm.Runs_in_test.$pristine }">
+                        <label for="Runs_in_test " class="control-label col-sm-2 ">Enter Runs_in_test</label>
+                        <div class="col-sm-10 ">
+                            <input class="form-control " type="number" name="Runs_in_test" ng-model="newPlayer.Runs_in_test" required/>
+                            <p ng-show="userForm.Runs_in_test.$invalid && !userForm.Runs_in_test.$pristine" class="help-block">You age is required.</p>
+                        </div>
+                    </div>
+                    <div class="form-group " ng-class="{ 'has-error' : userForm.Runs_in_odi.$invalid && !userForm.Runs_in_odi.$pristine }">
+                        <label for="Runs_in_odi " class="control-label col-sm-2 ">Enter Runs_in_odi</label>
+                        <div class="col-sm-10 ">
+                            <input class="form-control " type="number" name="Runs_in_odi" ng-model="newPlayer.Runs_in_odi" required/>
+                            <p ng-show="userForm.Runs_in_odi.$invalid && !userForm.Runs_in_odi.$pristine" class="help-block">You age is required.</p>
+                        </div>
+                    </div>
+                    <div class="form-group " ng-class="{ 'has-error' : userForm.Debut_Test.$invalid && !userForm.Debut_Test.$pristine }">
+                        <label for="Debut_Test " class="control-label col-sm-2 ">Enter Debut_Test</label>
+                        <div class="col-sm-10 ">
+                            <input class="form-control " date='dd-MM-yyyy' name="Debut_Test" ng-model="newPlayer.Debut_Test" required />
+                            <p ng-show="userForm.Debut_Test.$invalid && !userForm.Debut_Test.$pristine" class="help-block">You age is required.</p>
+                        </div>
+                    </div>
+                    <div class="form-group " ng-class="{ 'has-error' : userForm.Debut_Odi.$invalid && !userForm.Debut_Odi.$pristine }">
+                        <label for="Debut_Odi" class="control-label col-sm-2 ">Enter Debut_Odi</label>
+                        <div class="col-sm-10 ">
+                            <input class="form-control " date='dd-MM-yyyy' name="Debut_Odi" ng-model="newPlayer.Debut_Odi" required />
+                            <p ng-show="userForm.Debut_Odi.$invalid && !userForm.Debut_Odi.$pristine" class="help-block">You age is required.</p>
+                        </div>
+                    </div>
+                    <div class="form-group " ng-class="{ 'has-error' : userForm.rating.$invalid && !userForm.rating.$pristine }">
+                        <label for="rating " class="control-label col-sm-2 ">Enter rating</label>
+                        <div class="col-sm-10 ">
+                            <input class="form-control " type="number" name="rating" ng-model="newPlayer.rating" required/>
+                            <p ng-show="userForm.rating.$invalid && !userForm.rating.$pristine" class="help-block">You age is required.</p>
+                        </div>
+                    </div>
+                    <div class="form-group " ng-class="{ 'has-error' : userForm.code.$invalid && !userForm.code.$pristine }">
+                        <label for="age " class="control-label col-sm-2 ">Enter Country Code</label>
+                        <div class="col-sm-10 ">
+                            <input class="form-control " type="text" name="code" ng-model="newPlayer.code" required/>
+                            <p ng-show="userForm.code.$invalid && !userForm.code.$pristine" class="help-block">You age is required.</p>
+                        </div>
+                    </div>
+                    <div class="form-group " ng-class="{ 'has-error' : userForm.MOM.$invalid && !userForm.MOM.$pristine }">
+                        <label for="MOM " class="control-label col-sm-2 ">Enter MOM</label>
+                        <div class="col-sm-10 ">
+                            <input class="form-control " type="number" name="MOM" ng-model="newPlayer.MOM" required />
+                            <p ng-show="userForm.MOM.$invalid && !userForm.MOM.$pristine" class="help-block">You age is required.</p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <button type="submit" class="btn btn-default pull-right" data-dismiss="modal" ng-disabled="userForm.$invalid" ng-click="savePlayer()">Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
